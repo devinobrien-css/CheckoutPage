@@ -1,0 +1,347 @@
+/* Style Sheet for Checkout.js 
+ * ---------------------------
+ * Table of Contents:
+ *  I) Company Header Styles
+ *  II) 
+*/
+
+
+:root{
+    --graynavy: #116466; 
+    --lightgray: #D1E8E2;
+    --lightgold : #FFCB9A;
+}
+button {
+    cursor: pointer;
+}
+
+
+
+.company-header {
+    background-color: var(--graynavy);
+    padding:0.7em;
+}
+/* Name and Logo container - flexbox elements horizontally*/
+.company-header > div {
+    display: flex;
+    flex-direction: row;
+}
+.company-header > div > img {
+    display: block;
+    width: 8%;
+    border-radius: 50%;
+}
+
+.company-header > div > div {
+    padding:0.5em;
+}
+.company-header > div > div > p {
+    font-size: 3vw;
+    font-family: "Lato";
+    font-weight: 600;
+    padding: 0;
+    margin:0;
+    color:var(--lightgray)
+}
+.company-header > div > div > p:last-child{
+    font-size: 2vw;
+    font-weight: 300;
+}
+
+
+.checkout-section {
+    width:60%;
+    margin:0 auto;
+    transition: all 1s ease;
+}
+@media screen and (max-width:845px) {
+    .checkout-section{
+        width: 90%;
+        
+    }
+    .checkout-section > p {
+        font-size: 6vw;
+    }
+}
+.checkout-section > p
+{
+    font-family: "Raleway";
+    font-size: 4vw;
+}
+.checkout-section > div > div:first-child {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.checkout-section > div > div
+{
+    border-top: 3px solid white;
+    border-left: 3px solid var(--lightgray);
+    border-right: 3px solid var(--lightgray);
+}
+.checkout-section > div > div > button {
+    width: 33.333%;
+    padding:0.5em 0;
+
+    border-top: 3px solid white;
+    font-family: "Lato";
+    font-size: 2vw;
+    border: none;
+
+    transition: all 0.5s ease;
+}
+#checkout-option-container {
+    padding: 0;
+    margin: 0;
+}
+button.selected {
+    background-color: white;
+}
+button.unselected {
+    background-color: lightgray;
+}
+
+.shipping-section {
+    margin: 0;
+}
+.shipping-section > p,.billing-section > p,.review-section > p {
+    margin: 0;
+    padding:0.5em;
+    font-family: "Lato";
+    font-size: 2vw;
+}
+form.shipping-form > div {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0 auto;
+    transition: all 1s ease;
+}
+form.shipping-form > div > div{
+    display: flex;
+    flex-direction: column;
+
+    width: 46%;
+    margin: 0.5em;
+
+    border:2px solid var(--lightgray);
+    border-bottom:4px solid var(--graynavy);
+}
+form.shipping-form > div > div > label {
+    font-family: "Lato";
+    font-size: 1.5vw;
+    color: var(--graynavy);
+}
+form.shipping-form > div > div > input {
+    border: none;
+    font-family: "Lato";
+    font-size: 2vw;
+}
+form.shipping-form > button {
+    border:none;
+    border-radius: 5px;
+    text-decoration: none;
+
+    color: var(--graynavy);
+    font-family: "Lato";
+    font-size: 1.5vw;
+    font-weight: 400;
+
+    min-width: 40%;
+
+    padding: 0.5em;
+    display: block;
+    margin:0 auto;
+
+    background-color: var(--lightgold);
+}
+@media screen and (max-width:845px) {
+    form.shipping-form > div > div{
+        width: 80%;
+        margin: 0.5em auto;
+    }
+    .checkout-section > div > div > button {
+        font-size: 3vw;
+    }
+    .shipping-section > p,.billing-section > p,.review-section > p {
+        font-size: 3vw;
+    }
+    form.shipping-form > button {
+        font-size: 2.5vw;
+    }
+}
+#empty-form-alert{
+    width:80%;
+    margin:0.5em;
+    font-family: "Raleway";
+    border-left:3px solid red;
+    background: rgba(200, 0, 0, 0.4);
+    transition: all 1s ease-out;
+}
+#empty-form-alert > * {
+    overflow: hidden;
+    transition: all 1s ease-out;
+}
+
+
+.user-data > button {
+    border:none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--graynavy);
+    font-family: "Lato";
+    font-size: 1.5vw;
+    font-weight: 400;
+
+    display: block;
+    min-width: 40%;
+    padding: 0.5em;
+
+    background-color: var(--lightgold);
+    margin: 0.5em auto;
+}
+.user-data {
+    padding:0.5em;
+    width: 80%;
+    margin:0 auto;
+    border-left:5px solid var(--graynavy);
+    background-color: rgba(200, 200, 200, 0.4);
+}
+.user-data > div > p {
+    font-family: "Lato";
+}
+@media screen and (max-width:845px){
+    .user-data > button {
+        font-size: 3vw;
+    }
+    .user-data > div > p {
+        font-size: 3vw;
+    }
+}
+
+
+.empty-cart-section {
+    width:60%;
+    margin:0 auto;
+}
+.empty-cart-section > p {
+    font-family: "Raleway";
+    font-size: 4vw;
+}
+.empty-cart-section > p:nth-child(2) {
+    font-size: 2vw;
+}
+.empty-cart-section > button {
+    border:none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--graynavy);
+    font-family: "Lato";
+    font-size: 1.5vw;
+    font-weight: 400;
+
+    min-width: 40%;
+
+    padding: 0.5em;
+    margin:0 1em;
+
+    background-color: var(--lightgold);
+}
+@media screen and (max-width:845px){
+    .empty-cart-section > button {
+        font-size: 3vw;
+    }
+}
+
+
+
+.hidden{
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.visible{
+    opacity: 1 !important;
+    transition: opacity 1s ease;
+}
+
+
+
+.order-summary {
+    margin:0;
+    padding: 0.5em;
+}
+.order-summary > p:first-child {
+    font-family: "Raleway";
+    font-size: 5vw;
+    text-align: left;
+
+    margin:0;
+}
+.order-summary > p {
+    font-family: "Lato";
+    font-size: 3vw;
+    text-align: right;
+    margin:0;
+}
+.order-summary > div {
+    border-left:3px solid var(--graynavy);
+    background-color: var(--lightgray);
+    padding:0.5em;
+    margin:1em auto;
+    display: flex;
+}
+.order-summary > div > p:first-child {
+    font-size: 7vw;
+    font-family: "Raleway";
+    font-weight: 600;
+    margin:0;
+    background-color: white;
+    width: min-content;
+    padding: 0 0.2em;
+    border-radius: 10px;
+
+}
+.order-summary > div > div {
+    width: 55%;
+}
+.order-summary > div > div:last-child > p {
+    text-align: right;
+}
+.order-summary > div > div > p{
+    margin:0;
+    padding-left: 1em;
+
+    font-family: "Lato";
+    font-size: 2vw;
+}
+.order-summary > div > div > p:nth-child(2){
+    font-size: 1.5vw;
+    margin-left: 0.4em;
+}
+.order-summary > div > div > p:nth-child(3){
+    font-size: 1.5vw;
+    background-color: var(--lightgold);
+    padding:0.2em;
+    border-right:3px solid white;
+    border-left:3px solid white;
+}
+.order-summary > button {
+    border:none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--graynavy);
+    font-family: "Lato";
+    font-size: 1.5vw;
+    font-weight: 400;
+
+    min-width: 40%;
+    padding: 0.5em;
+
+    background-color: var(--lightgold);
+    margin:1.2em;
+}
+@media screen and (max-width:845px){
+    .order-summary > button {
+        font-size: 3vw;
+    }
+}
